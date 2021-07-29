@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Speech Recognition</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg  darkBlue fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='1.jpg')}}" width="50" height="30" alt="" style="
+        margin-bottom: 14px">
+        <span class='whiteText my-3'>Speech</span><span class="whiteText ">Recognition</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+            <i class="fas fa-bars lightblueIcon" aria-hidden="true"></i>
+        </span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav  ml-auto ">
+            <li class="nav-item active">
+                <a class="nav-link text-white navbarStyle " href="index.html">Home <span class="sr-only">(current)</span></a>
+             <li class="nav-item">
+                <a class="btn btn-primary buttonRadius mr-3 buttonStyle" href="LoginFront.html" role="button">{{name}}</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="btn btn-primary buttonRadius buttonStyle" href="/logout" role="button">logout</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+
+
+<table>
+  <tr>
+    <th>Sno</th>
+    <th>audiofile</th>
+    <th>emotion</th>
+    <!--<th>date</th>-->
+  </tr>
+  {% for user_history in user_history %}
+  {% set fname = "/static/" + user_history.playing_path %}
+
+
+  <tr>
+    <td>{{user_history.id}}</td>
+    <td><audio controls>
+  <source src="{{fname}}" />
+</audio></td>
+    <td>{{user_history.emotion}}</td>
+    <!--<td>{{user_history.date}}</td>-->
+  </tr>
+  {% endfor %}
+
+</table>
+
+</body>
+</html>

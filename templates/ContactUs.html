@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <style>
+        .textarea {
+            width: 30vw;
+            padding: 5px;
+            border: 1px solid #000000;
+            border-radius: 12px;
+            font-size: 1em;
+            border: 1px solid black;
+            outline: none;
+        }
+    </style>
+    <title>Speech Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css')}}">
+</head>
+
+<body>
+
+    <!--######################## NAVBAR #######################################-->
+   <nav class="navbar navbar-expand-lg  darkBlue fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='1.jpg')}}" width="50" height="30" alt="" style="
+        margin-bottom: 14px">
+        <span class='whiteText my-3'>Speech</span><span class="whiteText ">Recognition</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+            <i class="fas fa-bars lightblueIcon" aria-hidden="true"></i>
+        </span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav  ml-auto ">
+            <li class="nav-item active">
+                <a class="nav-link text-white navbarStyle " href="Index.php">Home <span class="sr-only">(current)</span></a>
+             <li class="nav-item">
+                <a class="btn btn-primary buttonRadius mr-3 buttonStyle" href="LoginFront.html" role="button">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-primary buttonRadius buttonStyle" href="SignupFront.html" role="button">Signup</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+        <!-- #################### ContactUs ################################ -->
+
+
+        <div class="container-fluid  d-flex justify-content-center " style="margin-top: 80px;">
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <form name="contact-form" action="/contact" method="post" id="contact-form">
+                        <div class="form-group">
+                            <label for="Name">Name</label><br>
+                            <input class="input" type="text" class="form-control" name="your_name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label><br>
+                            <input class="input" type="email" class="form-control" name="your_email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Phone">Phone</label><br>
+                            <input class="input" type="text" class="form-control" name="your_phone" placeholder="Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comments">Comments</label><br>
+                            <textarea class="textarea" name="comments" class="form-control" rows="3" cols="25" rows="8" placeholder="Comments"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary buttonRadius input" name="submit" value="Submit" id="submit_form">Submit</button>
+
+                    </form>
+
+                    <div class="response_msg"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- #########################Footer############################# -->
+<div class="pt-5 pb-5 footer " style="margin-top: 120px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xs-12 about-company">
+                    <span class="yellowText my-5 ">Speech</span><span class="yellowText ">Recognition</span>
+                </div>
+                <div class="col-lg-3 col-xs-12 links">
+                    <h4 class="mt-lg-0 mt-sm-3"></h4>
+                    <ul class="m-0 p-0" >
+                        <li><a class= "yellowText" href="Faq.php">FAQ</a></li>
+                        <li><a class= "yellowText" href="AboutUs.php">About us</a></li>
+                        <li><a class= "yellowText" href="ContactUs.php">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-xs-12 location">
+                    <h4 class="mt-lg-0 mt-sm-4">Reach Us</h4>
+                    <p> <a class="yellowText" href="tel:+91 8888888888">+91 88888 88888</a><br>
+                        <a class="yellowText" href="mailto: EMAIL DALNA HAI" target="_top">speechemotionrecog@gmail.com</a> </p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col copyright">
+                    <p class=""><small class="yellowText">© 2020. All Rights Reserved.</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+</html>

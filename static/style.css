@@ -1,0 +1,169 @@
+.carouselImg {
+    width: 100vw;
+    height: 70vh;
+}
+
+.darkBlue {
+    background-color: #0d2de0;
+}
+
+.whiteText {
+    color: white;
+    font-size: 2rem;
+}
+
+.yellowText {
+    color:#0d2de0;
+    font-size: 2rem;
+}
+
+.yellowIcon {
+    color: #000000;
+    font-size: 2rem;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.typeEffect {
+    background-color: #fff;
+    text-align: center;
+    color:#0d2de0;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.typeEffect a {
+    color: #0d2de0;
+}
+
+marquee {
+    background-color: #000000da;
+    margin-top: 80px;
+}
+
+.input {
+    width: 30vw;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 78px;
+    font-size: 1em;
+    border: 1px solid black;
+    outline: none;
+}
+
+.textarea {
+    width: 30vw;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    font-size: 1em;
+    border: 1px solid black;
+    outline: none;
+}
+
+.input:hover {
+    width: 30vw;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 78px;
+    font-size: 1em;
+    border: 1px solid black;
+    outline: none;
+    transform: scale(1.1);
+}
+
+.navbarStyle:hover {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    position: relative;
+}
+
+#Seat_Type {
+    width: 30vw;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 78px;
+    font-size: 1em;
+    border: 1px solid black;
+    outline: none;
+}
+
+.navbarStyle::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #0d2de0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.navbarStyle:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.buttonStyle:hover {
+    background-color: #0d2de0;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .input {
+        width: 90vw;
+        padding: 5px;
+        border: 1px solid #000000;
+        border-radius: 78px;
+        font-size: 1em;
+        border: 1px solid black;
+        outline: none;
+    }
+    .carouselImg {
+        width: 100vw;
+        height: 40vh;
+    }
+    .textarea {
+        width: 90vw;
+        padding: 5px;
+        border: 1px solid #000000;
+        border-radius: 12px;
+        font-size: 1em;
+        border: 1px solid black;
+        outline: none;
+    }
+}
+
+::placeholder {
+    padding-left: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.errorInput {
+    border: 1px solid red;
+}
+
+.site-footer {
+  background-color: #fff;
+  color: #000;
+}
+
+.site-footer a {
+  color: #000;
+}
